@@ -14,7 +14,7 @@ $(document).ready(function () {
     var randNum = Math.floor(Math.random() * 120) + 19;
     randomNumberHolder.text(randNum);
 
-
+// change onlcick event to jQuery click event
     function clickNum() {
         userNum = Math.floor(Math.random() * 12) + 1;
         pClicks.push(userNum);
@@ -26,18 +26,21 @@ $(document).ready(function () {
         totalClicksNumberHolder = $("#total-clicks");    
         totalClicksNumberHolder.text(totalClicks);
 
+        userLossesNumberHolder = $("#losses");
+        userLossesNumberHolder.text(userLosses);
+
         if (totalClicks > randNum) {
-            alert("hang on there buddy")
+            // alert("hang on there buddy")
             pClicks = [];
             userLosses ++;
             totalClicks = 0;
-            totalClicksNumberHolder.text("0");
-            
             
         }
         else
             return (userNum);
     }
+
+   
 
 
     $("#p1-holder").on("click", function () {
