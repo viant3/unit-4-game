@@ -9,5 +9,13 @@ section {
 
 h3 {
     background-color: #FDFFFC;
+    display: inline-flex;
+    margin-top: 2px;
+}
+
+.whiteBox {
+    text-align: center;
+    background-color: #FDFFFC;
     float: left;
 }
+
