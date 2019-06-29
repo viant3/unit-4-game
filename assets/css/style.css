@@ -5,6 +5,7 @@ body {
 section {
     text-align: center;
     background-color: #FDFFFC;
+    border-style: inset;
 }
 
 h3 {
@@ -17,5 +18,7 @@ h3 {
     text-align: center;
     background-color: #FDFFFC;
     float: left;
+    margin-top: 10px;
+    border-style: inset;
 }
 
