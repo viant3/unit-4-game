@@ -3,9 +3,11 @@ body {
 }
 
 section {
+    margin: 0 auto;
     text-align: center;
     background-color: #FDFFFC;
     border-style: inset;
+    max-width: 85%;
 }
 
 h3 {
@@ -20,7 +22,7 @@ h3 {
     background-color: #FDFFFC;
     margin-top: 10px;
     border-style: inset;
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .whiteBoxHolder {

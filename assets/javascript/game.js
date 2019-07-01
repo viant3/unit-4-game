@@ -16,16 +16,14 @@ $(document).ready(function () {
 
     function startingRandNum() {
         randomNumberHolder = $("#random-number");
-        randNum = Math.floor(Math.random() * 120) + 19;
+        randNum = Math.floor(Math.random() * (120 - 19)) + 19;
         randomNumberHolder.text(randNum);
-        // totalClicks = 0;
         pClicks = [];
     }
 
    
     function clickNum() {
-        $("#winLose").empty();
-        userNum = Math.floor(Math.random() * 12) + 1;
+        userNum = Math.floor(Math.random() * 12);
         pClicks.push(userNum);
         totalClicks = 0;
         for (var i = 0; i < pClicks.length; i++) {
@@ -49,7 +47,7 @@ $(document).ready(function () {
             // alert("hang on there buddy")
             userLosses++;
             totalClicksNumberHolder.text("0");
-            winLoseHolder.html("YOU DIED<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>THE TOTAL OF YOUR CLICKS WAS: " + totalClicks + "<br>TOO BAD<br>CLICK A SYMBOL TO START AGAIN");
+            winLoseHolder.html("YOU DIED<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>YOUR NUMBER WAS: " + totalClicks + "<br>TOO BAD<br>CLICK ON A SYMBOL TO TRY AGAIN");
             startingRandNum();
         }
 
@@ -57,18 +55,17 @@ $(document).ready(function () {
  
             userWins++;
             totalClicksNumberHolder.text("0");
-            winLoseHolder.html("YOU WON<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>THE TOTAL OF YOUR CLICKS WAS: " + totalClicks + "<br>GOOD JOB<br>CLICK A SYMBOL TO START AGAIN");
+            winLoseHolder.html("YOU WON<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>YOUR NUMBER WAS: " + totalClicks + "<br>GOOD JOB<br>CLICK ON A SYMBOL TO TRY AGAIN");
             startingRandNum();
 
         }
-        else
-            return (userNum);
+         else(winLoseHolder.text("KEEP GOING"));
     }
 
 
 
 
-    $("#p1-holder , #p2-holder , #p3-holder , #p4-holder").on("click", function () {
+    $(".p-holder").on("click", function () {
         clickNum()
         console.log(userNum);
 
