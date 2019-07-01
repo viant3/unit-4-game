@@ -1,6 +1,5 @@
 var userWins = 0;
 var userLosses = 0;
-var userPoints = 0;
 var userNum = 0;
 var randNum = 0;
 var totalClicks = 0;
