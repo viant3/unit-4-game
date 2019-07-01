@@ -15,10 +15,20 @@ h3 {
 }
 
 .whiteBox {
+    margin: 0% auto;
+    text-align: center;
+    background-color: #FDFFFC;
+    margin-top: 10px;
+    border-style: inset;
+    max-width: 50%;
+}
+
+.whiteBoxHolder {
     text-align: center;
     background-color: #FDFFFC;
     float: left;
     margin-top: 10px;
     border-style: inset;
+    min-width: 100%;
+    min-height: 195px;
 }
-

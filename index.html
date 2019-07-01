@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>Crystal Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,15 +29,31 @@
                 <img id="p3-holder" src="assets/images/p3.jpg">
                 <img id="p4-holder" src="assets/images/p4.jpg">
 
-                <h2>YOUR SCORE SO FAR</h2>
+                <h2>THE TOTAL OF YOUR CLICKS SO FAR</h2>
 
                 <h2 id="total-clicks">0</h2>
 
          </section>
+         <div class="row">
+             <div class="col">
                 <div class="whiteBox">
                     <h3>LOSSES</h3><br>
                     <h3 id="losses">0</h3>
                 </div>
-</body>
+            </div>
+
+            <div class="col">   
+                <div class="whiteBoxHolder"><h3 id="winLose">CLICK ON A SYMBOL TO BEGIN</h3></div>
+            </div>
+
+            <div class="col">
+                    <div class="whiteBox">
+                        <h3>WINS</h3><br>
+                        <h3 id="wins">0</h3>
+                    </div>
+                </div>
+         </div>
+
+            </body>
 
 </html>
