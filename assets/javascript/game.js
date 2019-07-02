@@ -22,7 +22,7 @@ $(document).ready(function () {
 
    
     function clickNum() {
-        userNum = Math.floor(Math.random() * 12);
+        userNum = Math.floor(Math.random() * (12 - 1)) + 1;
         pClicks.push(userNum);
         totalClicks = 0;
         for (var i = 0; i < pClicks.length; i++) {
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 
         if (totalClicks > randNum) {
-            // alert("hang on there buddy")
+
             userLosses++;
             totalClicksNumberHolder.text("0");
             winLoseHolder.html("YOU DIED<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>YOUR NUMBER WAS: " + totalClicks + "<br>TOO BAD<br>CLICK ON A SYMBOL TO TRY AGAIN");
@@ -65,40 +65,12 @@ $(document).ready(function () {
 
 
     $(".p-holder").on("click", function () {
-        clickNum()
-        console.log(userNum);
+        clickNum();
 
+        console.log(userNum);
         console.log("points so far: " + pClicks);
 
     });
-
-    // $("#p2-holder").on("click", function () {
-    //     clickNum()
-    //     console.log(userNum);
-
-    //     console.log("points so far: " + pClicks);
-    //     console.log(clickNum());
-    // });
-
-    // $("#p3-holder").on("click", function () {
-    //     clickNum()
-    //     console.log(userNum);
-
-    //     console.log("points so far: " + pClicks);
-    //     console.log(clickNum());
-    // });
-
-    // $("#p4-holder").on("click", function () {
-    //     clickNum()
-    //     console.log(userNum);
-
-    //     console.log("points so far: " + pClicks);
-    //     console.log(clickNum());
-    // });
-
-
-
-
 
 
 });
