@@ -15,14 +15,14 @@ $(document).ready(function () {
 
     function startingRandNum() {
         randomNumberHolder = $("#random-number");
-        randNum = Math.floor(Math.random() * (120 - 19)) + 19;
+        randNum = Math.floor(Math.random() * (121 - 19)) + 19;
         randomNumberHolder.text(randNum);
         pClicks = [];
     }
 
    
     function clickNum() {
-        userNum = Math.floor(Math.random() * (12 - 1)) + 1;
+        userNum = Math.floor(Math.random() * (13 - 1)) + 1;
         pClicks.push(userNum);
         totalClicks = 0;
         for (var i = 0; i < pClicks.length; i++) {
