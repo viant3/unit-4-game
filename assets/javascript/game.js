@@ -14,9 +14,9 @@ $(document).ready(function () {
     startingRandNum();
 
     function startingRandNum() {
-        randomNumberHolder = $("#random-number");
+        
         randNum = Math.floor(Math.random() * (121 - 19)) + 19;
-        randomNumberHolder.text(randNum);
+        $("#random-number").text(randNum);
         pClicks = [];
     }
 
@@ -31,14 +31,13 @@ $(document).ready(function () {
 
 
 
-        totalClicksNumberHolder = $("#total-clicks");
-        totalClicksNumberHolder.text(totalClicks);
+        $("#total-clicks").text(totalClicks);
 
-        userLossesNumberHolder = $("#losses");
-        userLossesNumberHolder.text(userLosses);
+    
+        $("#losses").text(userLosses);
 
-        userWinsNumberHolder = $("#wins");
-        userWinsNumberHolder.text(userWins);
+       
+        $("#wins").text(userWins);
 
         winLoseHolder = $("#winLose");
 
@@ -46,7 +45,7 @@ $(document).ready(function () {
         if (totalClicks > randNum) {
 
             userLosses++;
-            totalClicksNumberHolder.text("0");
+            $("#total-clicks").text("0");
             winLoseHolder.html("YOU DIED<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>YOUR NUMBER WAS: " + totalClicks + "<br>TOO BAD<br>CLICK ON A SYMBOL TO TRY AGAIN");
             startingRandNum();
         }
@@ -54,7 +53,7 @@ $(document).ready(function () {
         else if (totalClicks === randNum) {
  
             userWins++;
-            totalClicksNumberHolder.text("0");
+            $("#total-clicks").text("0");
             winLoseHolder.html("YOU WON<br>YOUR WERE TRYING TO MATCH: " + randNum + "<br>YOUR NUMBER WAS: " + totalClicks + "<br>GOOD JOB<br>CLICK ON A SYMBOL TO TRY AGAIN");
             startingRandNum();
 
@@ -68,8 +67,8 @@ $(document).ready(function () {
     $(".p-holder").on("click", function () {
         clickNum();
 
-        console.log(userNum);
-        console.log("points so far: " + pClicks);
+        // console.log(userNum);
+        // console.log("points so far: " + pClicks);
 
     });
 
