@@ -30,6 +30,7 @@ $(document).ready(function () {
         }
 
 
+
         totalClicksNumberHolder = $("#total-clicks");
         totalClicksNumberHolder.text(totalClicks);
 

@@ -8,6 +8,7 @@ section {
     background-color: #FDFFFC;
     border-style: inset;
     max-width: 85%;
+    padding-top: 20px;
 }
 
 h3 {
@@ -33,4 +34,10 @@ h3 {
     border-style: inset;
     min-width: 100%;
     min-height: 195px;
+}
+
+
+img:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
 }
