@@ -9,7 +9,7 @@ var pClicks = [];
 
 
 
-$(document).ready(function () {
+$(document).ready(() => {
 
     startingRandNum();
 
@@ -64,13 +64,7 @@ $(document).ready(function () {
 
 
 
-    $(".p-holder").on("click", function () {
-        clickNum();
-
-        // console.log(userNum);
-        // console.log("points so far: " + pClicks);
-
-    });
+    $(".p-holder").on("click", () => {clickNum()});
 
 
 });
